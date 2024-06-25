@@ -60,6 +60,12 @@ namespace LiveSplit.View
             set { Settings.RefreshRate = Math.Min(Math.Max(value, 20), 300); }
         }
 
+        public bool CheckForUpdates
+        {
+            get { return Settings.CheckForUpdates; }
+            set { Settings.CheckForUpdates = value; }
+        }
+
         public int ServerPort
         {
             get { return Settings.ServerPort; }
@@ -87,6 +93,7 @@ namespace LiveSplit.View
             chkAllowGamepads.DataBindings.Add("Checked", this, "AllowGamepadsAsHotkeys");
 
             txtRefreshRate.DataBindings.Add("Text", this, "RefreshRate");
+            chkCheckForUpdates.DataBindings.Add("Checked", this, "CheckForUpdates");
             txtServerPort.DataBindings.Add("Text", this, "ServerPort");
 
             UpdateDisplayedHotkeyValues();

@@ -19,6 +19,7 @@ namespace LiveSplit.Options
         public bool AgreedToSRLRules { get; set; }
         public bool SimpleSumOfBest { get; set; }
         public int RefreshRate { get; set; }
+        public bool CheckForUpdates { get; set; }
         public int ServerPort { get; set; }
         public IRaceViewer RaceViewer { get; set; }
         public IList<RaceProviderSettings> RaceProvider { get; set; }
@@ -97,6 +98,7 @@ namespace LiveSplit.Options
                 AgreedToSRLRules = AgreedToSRLRules,
                 SimpleSumOfBest = SimpleSumOfBest,
                 RefreshRate = RefreshRate,
+                CheckForUpdates = CheckForUpdates,
                 ServerPort = ServerPort,
                 ActiveAutoSplitters = new List<string>(ActiveAutoSplitters),
                 ComparisonGeneratorStates = new Dictionary<string, bool>(ComparisonGeneratorStates)
